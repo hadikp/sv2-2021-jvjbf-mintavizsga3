@@ -4,7 +4,7 @@ public abstract class Train {
 
     protected String name;
     private int numberOfWagons;
-    public static final int LENGTH = 15;
+    public static final int LENGTH_OF_WAGON = 15;
 
     public Train(int numberOfWagons) {
         this.numberOfWagons = numberOfWagons;
@@ -17,8 +17,9 @@ public abstract class Train {
     }
 
     public int getTotalLength() {
-        return numberOfWagons * LENGTH;
+        return numberOfWagons * LENGTH_OF_WAGON;
     }
+
 
     public abstract int calculateTravellingPeople();
 
