@@ -2,7 +2,7 @@ package railwaystation;
 
 public class PassengerTrain extends Train {
 
-    private boolean hasDiningCar;
+    public boolean hasDiningCar;
     public static final int PEOPLE_NUMBER_OF_WAGON = 70;
 
     public PassengerTrain(int numberOfWagons) { //nincs név és étkezőkocsi

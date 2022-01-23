@@ -26,7 +26,7 @@ public class RailwayStation {
     }
 
     public long getHowManyTrainsHaveName() {
-        return trains.stream().count();
+        return trains.stream().filter(train -> train.getName() != null).count();
     }
 
     public List<Train> getTrainsWithPassengersMoreThan(int number) {
