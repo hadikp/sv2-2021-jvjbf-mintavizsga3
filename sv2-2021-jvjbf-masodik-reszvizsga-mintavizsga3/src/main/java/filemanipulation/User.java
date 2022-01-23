@@ -6,8 +6,8 @@ public class User {
     private String birthday;
     private String email;
 
-    public User(String name, String birthday, String email) {
-        this.userName = name;
+    public User(String userName, String birthday, String email) {
+        this.userName = userName;
         this.birthday = birthday;
         this.email = email;
     }
@@ -23,4 +23,5 @@ public class User {
     public String getEmail() {
         return email;
     }
+
 }

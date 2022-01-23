@@ -34,7 +34,9 @@ class UserFileManagerTest {
         ufm.readUsersFromFile(Paths.get("src/test/resources/userinfo.csv"));
 
         assertEquals(6, ufm.getUsers().size());
+        System.out.println(ufm.getUsers());
         assertEquals("anOther", ufm.getUsers().get(2).getUserName());
+
 
     }
 

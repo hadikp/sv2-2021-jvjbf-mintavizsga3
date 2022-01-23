@@ -18,14 +18,30 @@ public class UserFileManager {
         catch (IOException ioe) {
             throw new IllegalStateException("Can't read file!", ioe);
         }
+        users = makeUser(readFile);
+    }
+
+    private List<User>  makeUser(List<String> readFile) {
+        List<User> result = new ArrayList<>();
+        for (String st: readFile) {
+            String[] stSplit = st.split(" ");
+
+            result.add(new User(stSplit[0], stSplit[1], stSplit[2]));
+        }
+        return result;
     }
 
     public void writeMaleHumansToFile(Path path) {
-        System.out.println();
+        makeCapital();
     }
 
-    public List<String> getUsers() {
-        return new ArrayList(users);
+    private void makeCapital() {
+        for (User u: users) {
+            System.out.println(u.getEmail());
+        }
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
 }
